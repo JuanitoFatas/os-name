@@ -1,6 +1,6 @@
 # `OSName`
 
-[![Gem Version](http://img.shields.io/gem/v/os_name.svg)][gem]
+[![Gem Version](https://badge.fury.io/rb/os_name.svg)][gem]
 [![Build Status](https://travis-ci.org/JuanitoFatas/comer_de_tapas.svg)][travis]
 [![Dependency Status](https://gemnasium.com/JuanitoFatas/os_name.svg)][gemnasium]
 [![Inline docs ](http://inch-ci.org/github/JuanitoFatas/os_name.svg)][docs]
