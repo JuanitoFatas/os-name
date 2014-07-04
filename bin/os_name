@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby -w
+
+Signal.trap('INT') { abort }
+
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
+
+require 'optparse'
+require "os_name"
+
+OptionParser.new do |opts|
+  opts.banner = <<-BANNER
+Example:
+  $ os_name
+  OS X Mavericks
+  BANNER
+end.parse!
+
+puts Class.new.extend(OSName).os_name
