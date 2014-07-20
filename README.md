@@ -6,6 +6,7 @@
 [![Inline docs ](http://inch-ci.org/github/JuanitoFatas/os_name.svg)][docs]
 [![Code Climate](https://codeclimate.com/github/JuanitoFatas/os_name.png)][codeclimate]
 [![Coverage](https://codeclimate.com/github/JuanitoFatas/os_name/coverage.png)][coverage]
+[![PullReview stats](https://www.pullreview.com/github/JuanitoFatas/os_name/badges/master.svg?)][pull-review]
 
 [gem]: https://rubygems.org/gems/os_name
 [travis]: https://travis-ci.org/JuanitoFatas/os_name
@@ -13,6 +14,7 @@
 [docs]: http://inch-ci.org/github/juanitofatas/os_name
 [codeclimate]: https://codeclimate.com/github/JuanitoFatas/os_name
 [coverage]: https://codeclimate.com/github/JuanitoFatas/os_name
+[pull-review]: https://www.pullreview.com/github/JuanitoFatas/os_name/reviews/master
 
 Get the name of the current operating system.
 
