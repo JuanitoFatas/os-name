@@ -5,6 +5,10 @@ class OSNameTest < OSName::Test
     assert os_name.size > 0
   end
 
+  def test_os_name_os_x
+    assert_equal 'OS X', os_name('darwin', '4.0').strip
+  end
+
   def test_os_name_os_x_yosemite
     assert_equal 'OS X Yosemite', os_name('darwin', '14.0.0')
   end
@@ -13,11 +17,15 @@ class OSNameTest < OSName::Test
     assert_equal 'Linux 3.13', os_name('linux', '3.13.0-24-generic')
   end
 
+  def test_os_name_win32
+    assert_equal 'Windows', os_name('win32').strip
+  end
+
   def test_os_name_windows_5_1_2600
     assert_equal 'Windows XP', os_name('win32', '5.1.2600')
   end
 
-  def test_os_name_win32
-    assert_equal 'Windows', os_name('win32')
+  def test_os_name_windows_10
+    assert_equal 'Windows 10', os_name('win32', '6.4')
   end
 end

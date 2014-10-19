@@ -55,14 +55,14 @@ module OSName
 
     case os
     when 'darwin'
-      id = OSX.fetch version.split('.')[0]
-      'OS X' + (id ? " #{id}" : '')
+      id = OSX.fetch(version.split('.')[0]) { nil }
+      "OS X #{id}"
     when 'linux'
       id = version.sub(/^(\d+\.\d+).*/, '\1')
-      'Linux' + (id ? " #{id}" : '')
+      "Linux #{id}"
     when 'win32'
-      id = WIN32[version.slice(0, 3)]
-      'Windows' + (id ? " #{id}" : '')
+      id = WIN32.fetch(version.slice(0, 3)) { nil }
+      "Windows #{id}"
     end
   end
 
