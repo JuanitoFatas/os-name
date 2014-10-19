@@ -2,17 +2,17 @@
 
 Signal.trap('INT') { abort }
 
-$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
-
 require 'optparse'
-require "os_name"
+require_relative '../lib/os_name'
 
 OptionParser.new do |opts|
-  opts.banner = <<-BANNER
-Example:
-  $ os_name
-  OS X Mavericks
-  BANNER
+  opts.banner = 'Usage: os_name [options]'
+
+  opts.on('-v', '--version', 'os_name version') do |_|
+    puts OSName::VERSION
+    exit
+  end
+
 end.parse!
 
 puts Class.new.extend(OSName).os_name

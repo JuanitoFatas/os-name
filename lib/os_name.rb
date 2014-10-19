@@ -1,9 +1,10 @@
-require "os_name/version"
+require 'os_name/version'
 
 # Operating System Name
 module OSName
   # Win32 platform version mapping
   WIN32 = {
+    '6.4' => '10',
     '6.3' => '8.1',
     '6.2' => '8',
     '6.1' => '7',
@@ -57,7 +58,7 @@ module OSName
       id = OSX.fetch version.split('.')[0]
       'OS X' + (id ? " #{id}" : '')
     when 'linux'
-      id = version.gsub(/^(\d+\.\d+).*/, '\1')
+      id = version.sub(/^(\d+\.\d+).*/, '\1')
       'Linux' + (id ? " #{id}" : '')
     when 'win32'
       id = WIN32[version.slice(0, 3)]
